@@ -11,7 +11,12 @@ const Chat = () => {
     return (
         <div className='chat-area'>
             {
-                selector && selector.length > 0 && selector.map((mes,index) =>  <div key={index}>{mes}</div> )
+                selector && selector.length > 0 && selector.map((message,index) =>  {
+                    return(
+                        <div id={message.identifier === 0 ? 'me' : 'bot'} className='message'>
+                            <div className='message-content' key={index}>{message.texts}</div>
+                        </div>
+                    )})
             }
             <Inputt />
         </div>

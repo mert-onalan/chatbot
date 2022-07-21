@@ -13,10 +13,10 @@ function Inputt() {
 
     const SentButton = e => {
         e.preventDefault();
-        dispatch(selecteduser === 1 ? firstArea(input) 
-        : selecteduser === 2 ? secondArea(input) 
-        : selecteduser === 3 ? thirdArea(input)
-        : selecteduser === 4 ? fourthArea(input) : ''  );
+        dispatch(selecteduser === 1 ? firstArea(input, 0) 
+        : selecteduser === 2 ? secondArea(input, 0) 
+        : selecteduser === 3 ? thirdArea(input, 0)
+        : selecteduser === 4 ? fourthArea(input, 0) : ''  );
         setInput('');
     }
 
